@@ -76,6 +76,7 @@ with web_events_tbl as (
     inner join search_tbl
     on web_events_tbl.session_id = search_tbl.session_id
     group by aggregated_daily_dt
+    order by aggregated_daily_dt
 )
 select 
 	*
